@@ -1,0 +1,443 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Malaysian Flavours - Recipes</title>  
+  <link rel="icon" type="image/png" href="index/image/logo.png">  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script> 
+    
+    <style>  
+        :root {  
+            --primary-green: #97bc62;  
+            --dark-green: #2c5f2d;  
+            --light-green: #97bc62;  
+            --accent-green: #6da34d;  
+            --white: #ffffff;  
+            --light-gray: #f5f5f5;  
+            --dark-gray: #333333;  
+        }  
+
+        body {  
+            font-family: 'Roboto', Arial, sans-serif;  
+            background-color: var(--light-gray);  
+            color: var(--dark-gray);  
+            scroll-behavior: smooth; /* Smooth scrolling */  
+        }  
+
+        header {  
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));  
+            padding: 20px;  
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+        }  
+
+        .header-content {  
+            display: flex;  
+            align-items: center;  
+            justify-content: space-between;  
+            max-width: 1200px;  
+            margin: 0 auto;  
+        }  
+
+        .logo-container {  
+            display: flex;  
+            align-items: center;  
+        }  
+
+        .logo {  
+            width: 100px;  
+            height: auto;  
+        }  
+
+        header h1 {  
+            font-family: 'Brush Script MT', cursive;  
+            color: #fff;  
+            font-size: 36px;  
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
+            margin-left: 10px;  
+        }  
+
+        nav ul {  
+            display: flex;  
+            list-style-type: none;  
+        }  
+
+        nav li {  
+            margin-left: 20px;  
+        }  
+
+        nav a {  
+            color: var(--white);  
+            text-decoration: none;  
+            font-size: 16px;  
+            transition: color 0.3s ease;  
+        }  
+
+        nav a:hover {  
+            color: var(--light-green);  
+            border-bottom: 2px solid var(--light-green);  
+        }  
+
+        .search-container {  
+            display: flex;  
+            align-items: center;  
+            background-color: #fff;  
+            border-radius: 4px;  
+            padding: 5px 10px;  
+        }  
+
+        #search-input {  
+            border: none;  
+            outline: none;  
+        }  
+
+        #search-button {  
+            background-color: var(--light-green);  
+            border: none;  
+            color: var(--dark-green);  
+            cursor: pointer;  
+        }  
+
+        #recipe-container {  
+            padding: 5px;  
+        }  
+
+        #recipes-list {  
+            display: flex;  
+            flex-wrap: wrap;  
+            justify-content: center;  
+            list-style-type: none;  
+            padding: 0;  
+            margin: 0;  
+        }  
+
+        .recipe-item {  
+            width: 300px;  
+            margin: 20px;  
+            padding: 10px;  
+            background-color: var(--white);  
+            border: 1px solid #ccc;  
+            border-radius: 4px;  
+            text-align: center;  
+            transition: transform 0.3s ease, box-shadow 0.3s ease;  
+            cursor: pointer; /* Cursor to indicate clickability */  
+        }  
+
+        .recipe-item:hover {  
+            transform: translateY(-5px);  
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
+        }  
+
+        .recipe-image {  
+            width: 100%;  
+            object-fit: cover;  
+            border-radius: 4px;  
+        }  
+
+        .recipe-label {  
+            margin-top: 10px;  
+            font-size: 18px;  
+            font-weight: bold;  
+        }  
+
+        .recipe-source {  
+            color: var(--dark-gray);  
+            font-size: 14px;  
+        }  
+
+        .recipe-link {  
+            display: block;  
+            margin-top: 10px;  
+            color: var(--accent-green);  
+            text-decoration: none;  
+        }  
+
+        .recipe-link:hover {  
+            color: var(--dark-green);  
+        }  
+
+        #load-more {  
+            display: block;  
+            margin: 20px auto;  
+            padding: 8px 16px;  
+            background-color: var(--primary-green);  
+            color: var(--white);  
+            border: none;  
+            border-radius: 4px;  
+            cursor: pointer;  
+        }  
+
+        #load-more:hover {  
+            background-color: var(--accent-green);  
+        }  
+
+        #loading-indicator {  
+            display: none;  
+            text-align: center;  
+        }  
+
+        .spinner-border {  
+            width: 3rem;  
+            height: 3rem;  
+        }  
+
+        /* Custom Toastr Success Style */  
+        .toast-success {  
+            background-color: var(--primary-green) !important;  
+        }  
+
+         /* Add responsive styles */  
+         @media (max-width: 768px) {  
+            .header-content {  
+                flex-direction: column;  
+            }  
+            nav ul {  
+                flex-direction: column;  
+                align-items: center;  
+            }  
+            nav li {  
+                margin: 10px 0;  
+            }  
+        }  
+
+        /* Infinite scroll indicator */  
+        #infinite-scroll-trigger {  
+            text-align: center;  
+            padding: 20px;  
+        }  
+    </style>  
+</head>  
+
+<body>  
+    <header>  
+        <div class="header-content">  
+            <div class="logo-container">  
+                <img src="index/image/logo.png" alt="Logo" class="logo">  
+                <h1>Malaysian Flavours</h1>  
+            </div>  
+            <nav>  
+                <ul>  
+                    <li><a href="/index/index.html">Home</a></li>  
+                    <li><a href="/about/about.html">About</a></li>  
+                    <li><a href="/foodCulture/foodCulture.html">Food Culture</a></li>  
+                    <li><a href="/region/region.html">Regional Cuisines</a></li>  
+                    <li><a href="/recipes/recipes.html">Recipes</a></li>  
+                    <li><a href="/Blog/Blog.html">Blog</a></li>  
+                    <li><a href="/signin/signin.html" class="login-btn">Login</a></li>  
+                    <li>  
+                        <div class="search-container">  
+                            <input type="text" id="search-input" placeholder="Search dishes">  
+                            <button id="search-button"><i class="fas fa-search"></i></button>  
+                        </div>  
+                    </li>  
+                </ul>  
+            </nav>  
+        </div>  
+    </header>  
+
+    <div id="loading-indicator">  
+        <div class="spinner-border text-success" role="status">  
+            <span class="sr-only">Loading...</span>  
+        </div>  
+    </div>  
+
+    <div id="recipe-container">  
+      <ul id="recipes-list"></ul>  
+      <div id="infinite-scroll-trigger">  
+          <div class="spinner-border text-success" role="status">  
+              <span class="sr-only">Loading...</span>  
+          </div>  
+      </div>  
+  </div>   
+ 
+  <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel" aria-hidden="true">  
+    <div class="modal-dialog" role="document">  
+      <div class="modal-content">  
+        <div class="modal-header">  
+          <h5 class="modal-title" id="recipeModalLabel"></h5>  
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">  
+            <span aria-hidden="true">&times;</span>  
+          </button>  
+        </div>  
+        <div class="modal-body">  
+        </div>  
+      </div>  
+    </div>  
+  </div>
+
+  <script> 
+  $(document).ready(function() {  
+    var currentPage = 0;  
+    var pageSize = 10;  
+    var appId = '0d74afd1';  
+    var appKey = '746fd8dfddc49a882749f2b1dda17f44';  
+    var searchQuery = 'Malaysian';  
+    var isLoading = false;  
+
+    function loadRecipes(search = '', isNewSearch = false) {  
+        if (isLoading) return;  
+        isLoading = true;  
+        $('#infinite-scroll-trigger').show();  
+
+        if (isNewSearch) {  
+            currentPage = 0;  
+            $('#recipes-list').empty();  
+        }  
+
+        $.ajax({  
+            url: 'https://api.edamam.com/api/recipes/v2',  
+            data: {  
+                type: 'public',  
+                app_id: appId,  
+                app_key: appKey,  
+                q: encodeURIComponent(search),  
+                from: currentPage * pageSize,  
+                to: (currentPage + 1) * pageSize  
+            },  
+            type: 'GET',  
+            success: function (data) {  
+                if (data.hits.length === 0) {  
+                    toastr.warning('No more recipes found.');  
+                    $('#infinite-scroll-trigger').hide();  
+                    isLoading = false;  
+                    return;  
+                }  
+                
+                data.hits.forEach(function (hit) {  
+                    var recipe = hit.recipe;  
+                    var recipeItem = $(`  
+                        <div class="recipe-item" tabindex="0" role="button" aria-label="${recipe.label}">  
+                            <img class="recipe-image" src="${recipe.image}" alt="${recipe.label}" loading="lazy">  
+                            <h3 class="recipe-label">${recipe.label}</h3>  
+                            <p class="recipe-source">Source: ${recipe.source}</p>  
+                        </div>  
+                    `);  
+                    recipeItem.on('click keypress', function(e) {  
+                        if (e.type === 'click' || e.which === 13) {  
+                            showRecipeModal(recipe);  
+                        }  
+                    });  
+                    $('#recipes-list').append(recipeItem);  
+                });  
+                currentPage++;  
+                isLoading = false;  
+                $('#infinite-scroll-trigger').hide();  
+                toastr.success('Recipes loaded successfully!', 'Success');  
+
+                // Store in local storage  
+                localStorage.setItem('lastSearch', search);  
+                localStorage.setItem('lastPage', currentPage);  
+            },  
+            error: function (xhr, status, error) {  
+                isLoading = false;  
+                $('#infinite-scroll-trigger').hide();  
+                console.error('Error fetching recipes:', error);  
+                toastr.error('Error fetching recipes: ' + error, 'Error');  
+            }  
+        });  
+    }  
+
+    function showRecipeModal(recipe) {  
+        var modal = $('#recipeModal');  
+        modal.find('.modal-title').text('Recipe: ' + recipe.label);  
+        modal.find('.modal-body').html(`  
+            <img src="${recipe.image}" alt="${recipe.label}" style="max-width: 100%;">  
+            <p>Source: ${recipe.source}</p>  
+            <p>Calories: ${Math.round(recipe.calories)}</p>  
+            <h4>Ingredients:</h4>  
+            <ul>  
+                ${recipe.ingredientLines.map(ingredient => `<li>${ingredient}</li>`).join('')}  
+            </ul>  
+            <a href="${recipe.url}" target="_blank" rel="noopener noreferrer">View Full Recipe</a>  
+        `);  
+        modal.modal('show');  
+    }  
+
+    var debouncedSearch = _.debounce(function() {  
+        searchQuery = $('#search-input').val() || 'Malaysian';  
+        loadRecipes(searchQuery, true);  
+    }, 300);  
+
+    $('#search-input').on('input', debouncedSearch);  
+
+    $(window).scroll(function() {  
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {  
+            loadRecipes(searchQuery, false);  
+        }  
+    });  
+
+    // Load last search from local storage  
+    var lastSearch = localStorage.getItem('lastSearch');  
+    var lastPage = localStorage.getItem('lastPage');  
+    if (lastSearch) {  
+        searchQuery = lastSearch;  
+        currentPage = parseInt(lastPage) || 0;  
+        $('#search-input').val(lastSearch);  
+    }  
+
+    loadRecipes(searchQuery, true);  
+
+    var availableTags = [  
+        "Nasi Lemak", "Roti Canai", "Satay", "Laksa",  
+        "Chicken Curry", "Rendang", "Char Kway Teow"  
+    ];  
+
+    $("#search-input").autocomplete({  
+        source: availableTags  
+    });  
+
+    // Accessibility improvements  
+    $('.recipe-item').keypress(function(e) {  
+        if (e.which === 13) {  
+            $(this).click();  
+        }  
+    });  
+
+    // Add event listener for closing modal with Esc key  
+    $(document).on('keydown', function(e) {  
+        if (e.key === "Escape" && $('#recipeModal').hasClass('show')) {  
+            $('#recipeModal').modal('hide');  
+        }  
+    });  
+
+    var recipeItem = $(`  
+    <div class="recipe-item" tabindex="0" role="button" aria-label="${recipe.label}" data-recipe='${JSON.stringify(recipe)}'>  
+        <img class="recipe-image" src="${recipe.image}" alt="${recipe.label}" loading="lazy">  
+        <h3 class="recipe-label">${recipe.label}</h3>  
+        <p class="recipe-source">Source: ${recipe.source}</p>  
+    </div>  
+`);
+
+function showRecipeModal(recipe) {  
+    var modal = $('#recipeModal');  
+    modal.find('.modal-title').text(recipe.label);  
+    modal.find('.modal-body').html(`  
+        <img src="${recipe.image}" alt="${recipe.label}" style="max-width: 100%;">  
+        <p><strong>Source:</strong> ${recipe.source}</p>  
+        <p><strong>Calories:</strong> ${Math.round(recipe.calories)}</p>  
+        <h4>Ingredients:</h4>  
+        <ul>  
+            ${recipe.ingredientLines.map(ingredient => `<li>${ingredient}</li>`).join('')}  
+        </ul>  
+        <h4>Instructions:</h4>  
+        <p>For full instructions, please visit: <a href="${recipe.url}" target="_blank" rel="noopener noreferrer">View Full Recipe</a></p>  
+    `);  
+    modal.modal('show');  
+}
+
+$(document).on('click', '.recipe-item', function() {  
+    var recipe = JSON.parse($(this).attr('data-recipe'));  
+    showRecipeModal(recipe);  
+});
+});</script>  
+</body>  
+</html>
