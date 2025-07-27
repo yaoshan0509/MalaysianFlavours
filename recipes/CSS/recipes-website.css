@@ -1,0 +1,819 @@
+:root {  
+    --primary-green:#97bc62;   
+    --dark-green: #2c5f2d;  
+    --light-green: #97bc62;  
+    --accent-green: #6da34d;  
+    --white: #ffffff;  
+    --light-gray: #f5f5f5;  
+    --dark-gray: #333333;  
+  }
+
+/* =========================Navigation Bar=====================*/
+
+header {  
+    background-color: var(--primary-green);  
+    padding: 15px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+    position: fixed; /* Fixes the header at the top of the page */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the header stays on top of other elements */
+    transition: height 0.3s ease, padding 0.3s ease; /* Smooth transition for height and padding */
+}
+
+body {
+    padding-top: 100px; /* Add padding to the top of the body content to avoid content being hidden under the fixed header */
+}
+
+header.minimized {  
+    padding: 5px; /* Reduces the padding when minimized */
+    height: 85px; /* Sets a smaller height */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    transition: justify-content 0.3s ease; /* Smooth transition for alignment */
+}
+
+header.minimized .navbar {
+    justify-content: flex-start; /* Aligns the content to the right when minimized */
+}
+
+.navbar-logo {
+    width: 80px;
+    height: 58px;
+    margin: 20px;
+}
+
+header.minimized .navbar-logo {
+    width: 50px; /* Reduces logo size when minimized */
+    height: 36px;
+}
+
+.navbar h1 {  
+    font-family: 'Brush Script MT', cursive;  
+    color: #fff;  
+    font-size: 40px;  
+    font-weight: normal;  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
+    letter-spacing: 2px;  
+}
+
+header.minimized .navbar h1 {
+    font-size: 28px; /* Reduces the font size of the title */
+}
+
+.navbar-content {  
+    display: flex;   
+    justify-content: flex-evenly;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
+}
+
+#navbar.minimized ul {
+    display: flex;
+    justify-content: flex-end; /* Aligns the content to the right */
+}
+
+.navbar-content ul {  
+    display: flex;  
+    list-style: none;  
+    justify-content: space-evenly;
+    margin: 0;  
+    padding: 0;
+    flex-wrap: wrap; /* Wraps the menu items on smaller screens */
+}  
+  
+.navbar-content li {  
+    margin-left: 20px;
+    margin-bottom: 10px; /* Adds spacing between items when they wrap */
+}  
+  
+.navbar-content a {
+    color: var(--white);  
+    text-decoration: none;  
+    font-size: 20px;  
+    font-weight: 500;  
+    transition: color 0.3s ease;
+}
+  
+#navbar.minimized ul li {
+    display: none; /* Hide all list items */
+}
+
+#navbar.minimized ul li:first-child, /* Show "Home" */
+#navbar.minimized ul li:nth-child(5), /* Show "Recipes" */
+#navbar.minimized ul li:last-child { /* Show "Login" */
+    display: inline-block;
+}
+
+.navbar-content a:hover {  
+    color: var(--light-green);  
+}
+
+@media (max-width: 768px) {
+    .navbar h1 {  
+        font-size: 28px;  
+    }
+  
+    .navbar-logo {
+        width: 50px;
+        height: 38px;
+    }
+
+    .navbar-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+        display: none; /* Initially hidden */
+        width: 100%;
+    }
+
+    .navbar-content ul {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%;
+    }
+
+    .navbar-content li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .navbar-content a {
+        font-size: 18px;
+    }
+
+    .navbar-toggle {
+        display: block; /* Show the toggle button on smaller screens */
+    }
+
+    .navbar.minimized .navbar-content {
+        justify-content: flex-start; /* Aligns the content to the left */
+    }
+
+    .navbar.minimized .navbar-toggle {
+        display: block;
+    }
+
+    .navbar.minimized ul li {
+        display: block; /* Show all menu items in minimized state on mobile */
+    }
+
+    .navbar.minimized {
+        justify-content: flex-end;
+    }
+}
+  
+/* ========================= Navigation Bar =====================*/
+
+/* ========================= Horizontal line =====================*/
+
+hr {
+    width: 100%;
+    margin: 10px 0px;
+    border: 0;
+    border-top: 2px solid var(--accent-green); /* Consistent green color */
+}
+
+/* ========================= Horizontal line =====================*/
+
+
+/* =====================  Body Container  ========================*/
+.body-recipe {
+    max-width: 50%; /* Sets a maximum width for larger screens */
+    margin: 30px auto; /* Centers the content horizontally */
+    padding: 0px;
+    text-align: center; /* Centers text and inline elements */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .body-recipe {
+        max-width: 90%; /* Increase width on smaller screens */
+        padding: 10px; /* Add some padding for smaller screens */
+    }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 480px) {
+    .body-recipe {
+        max-width: 100%; /* Use full width on very small screens */
+        padding: 15px; /* More padding to ensure good spacing */
+    }
+}
+/* =====================  Body Container  ========================*/
+
+/* =========================  Body Top ==========================*/
+.body-top {
+    margin: 20px 0;
+}
+
+.body-top-content {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 0;
+}
+
+.breadcrumb {
+    width: 100%;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #234567;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust breadcrumb for smaller screens */
+@media (max-width: 768px) {
+    .breadcrumb {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb {
+        font-size: 12px;
+    }
+}
+/* =========================  Body Top ==========================*/
+
+/* =========================  Image Container ==========================*/
+.image-container {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    margin-top: 20px; /* Adds space above the image */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensures the image scales down if too large */
+    height: auto; /* Maintains the image aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+/* =========================  Image Container ==========================*/
+
+/* =========================  Body Content ==========================*/
+.body-content {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.body-content h2 {
+    font-size: 30px;
+    color: #2c5f5d;
+    font-weight: 900;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.body-content h3 {
+    text-decoration: underline;
+}
+
+.recipe-description {
+    font-size: 18px;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.ingredients-list {
+    justify-content: flex-start;
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.ingredients-list, .recipe-instructions {
+    margin-bottom: 20px;
+}
+
+.ingredients-list li, .recipe-instructions li {
+    margin-bottom: 10px;
+}
+
+.recipe-instructions {
+    justify-content: flex-start;
+    text-align: left;
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* Adjust body content for smaller screens */
+@media (max-width: 768px) {
+    .body-content {
+        padding: 15px;
+    }
+
+    .body-content h2 {
+        font-size: 26px;
+    }
+
+    .recipe-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .body-content {
+        padding: 10px;
+    }
+
+    .body-content h2 {
+        font-size: 22px;
+    }
+
+    .recipe-description {
+        font-size: 14px;
+    }
+}
+/* =========================  Body Content ==========================*/
+
+/* =========================  Youtube Video ==========================*/
+.video-tutorial {
+    margin: 30px auto;
+    max-width: 100%;
+}
+
+/* Adjust video size for smaller screens */
+@media (max-width: 768px) {
+    .video-tutorial iframe {
+        width: 100%; /* Makes the video full-width */
+    }
+}
+/* =========================  Youtube Video ==========================*/
+
+/* =========================  Nutrition Facts ==========================*/
+.nutrition-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.nutrition-table th, .nutrition-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.nutrition-table th {
+    background-color: #07a79f;
+    color: #fff;
+    font-weight: 700;
+}
+
+.nutrition-table td {
+    font-size: 16px;
+}
+
+.nutrition-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Adjust nutrition facts table for smaller screens */
+@media (max-width: 768px) {
+    .nutrition-table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nutrition-table {
+        font-size: 12px;
+    }
+}
+/* =========================  Nutrition Facts ==========================*/
+
+/* =========================  Comments ==========================*/
+.comment-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-container h3 {
+    font-size: 36px;
+    color: #07a79f;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+    text-align: left;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.comment-form button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #07a79f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #3c7f3d;
+}
+
+.comments-list {
+    margin-top: 20px;
+    display: block;
+}
+
+.comment-item {
+    padding: 15px;
+    margin: 0;
+    text-align: left;
+    display: block;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-author {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+.comment-content-box {
+    margin: 0px;
+    padding: 10px;
+    text-align: left;
+    background-color: #07a79f;
+    border-radius: 10px;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.comment-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: left;
+}
+
+/* Adjust comments for smaller screens */
+@media (max-width: 768px) {
+    .comment-container h3 {
+        font-size: 28px;
+    }
+
+    .comment-item {
+        padding: 10px;
+    }
+
+    .comment-content-box {
+        padding: 8px;
+    }
+
+    .comment-author {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comment-container h3 {
+        font-size: 24px;
+    }
+
+    .comment-item {
+        padding: 8px;
+    }
+
+    .comment-content-box {
+        padding: 6px;
+    }
+
+    .comment-author {
+        font-size: 12px;
+    }
+}
+/* =========================  Comments ==========================*/
+
+/* The Modal (background) */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 50%;
+    max-height: 70%;
+    border-radius: 10px;
+}
+
+/* Adjust modal content for smaller screens */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 90%;
+    }
+}
+
+/* The Close Button */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* =========================  Comments ==========================*/
+
+/* =========================  Favorite Btn ==========================*/
+
+/* Adjust favorite button styling for fixed position */
+.favorite-btn-fixed {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    z-index: 1000; /* Ensures the button stays above other content */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Adjust the size of the icons within the fixed button */
+.favorite-btn-fixed .heart-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the fixed button */
+.favorite-btn-fixed:hover {
+    background-color: #ff6b6b;
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Show the filled heart when active */
+.favorite-btn-fixed.active .filled {
+    display: block; /* Show the filled heart */
+}
+
+/* Hide the outlined heart when active */
+.favorite-btn-fixed.active .outline {
+    display: none; /* Hide the outlined heart */
+}
+
+@media (max-width: 768px) {
+    .favorite-btn-fixed {
+        bottom: 30px;
+        right: 20px;
+        padding: 10px;
+    }
+
+    .favorite-btn-fixed .heart-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Adjustments for very small screens like phones */
+@media (max-width: 480px) {
+    .favorite-btn-fixed {
+        bottom: 20px;
+        right: 10px;
+        padding: 8px;
+    }
+
+    .favorite-btn-fixed .heart-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+/* =========================  Favorite Btn ==========================*/
+
+/* =========================  Share Btn ==========================*/
+/* Share Button Styling */
+.share-btn-fixed {
+    position: fixed;
+    bottom: 120px; /* Positioned above the favorite button */
+    right: 40px;
+    z-index: 1000; /* Ensures the button stays above other content */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.share-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.share-btn-fixed:hover {
+    background-color: #007bff;
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Share Options Pop-Out Styling */
+.share-options {
+    position: fixed;
+    bottom: 120px; /* Align with share button */
+    right: 40px; /* Align with share button */
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+    opacity: 0; /* Start hidden */
+    transform: scale(0); /* Start small */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.share-option {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    color: white;
+    transition: transform 0.6s ease, background-color 0.6s ease;
+}
+
+/* Positioning the share options */
+.share-option.facebook {
+    bottom: 80px; /* Directly above the share button */
+    right: 5px;
+    background-color: #3b5998;
+}
+
+.share-option.instagram {
+    bottom: 55px; /* Above the share button */
+    right: 60px; /* To the left of the share button */
+    background-color: #e1306c;
+}
+
+.share-option.telegram {
+    bottom: 0px; /* Inline with the share button */
+    right: 75px; /* Directly left of the share button */
+    background-color: #0088cc;
+}
+
+/* Hover effects for share options */
+.share-option:hover {
+    background-color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Show share options when share button is active */
+.share-btn-fixed.active ~ .share-options {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Individual Platform Colors */
+.facebook {
+    background-color: #3b5998;
+}
+
+.instagram {
+    background-color: #e1306c;
+}
+
+.telegram {
+    background-color: #0088cc;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .share-btn-fixed {
+        bottom: 90px;
+        right: 20px;
+        padding: 10px;
+    }
+
+    .share-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .share-options .facebook {
+        transform: translateY(0px); /* Adjust pop-up positions */
+    }
+
+    .share-options .instagram {
+        transform: translate(-10px, -10px); /* Adjust pop-up positions */
+    }
+
+    .share-options .telegram {
+        transform: translateX(10px); /* Adjust pop-up positions */
+    }
+}
+
+@media (max-width: 480px) {
+    .share-btn-fixed {
+        bottom: 70px;
+        right: 10px;
+        padding: 8px;
+    }
+
+    .share-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .share-options .facebook {
+        transform: translateY(0px); 
+    }
+
+    .share-options .instagram {
+        transform: translate(0px, 0px); 
+    }
+
+    .share-options .telegram {
+        transform: translateX(0px); 
+    }
+
+}

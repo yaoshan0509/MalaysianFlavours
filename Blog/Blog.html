@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="image/logo.png">
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <div class="container flex">
+                <div class="navicons flex">
+                    <a href="https://www.facebook.com/profile.php?id=61564283282066&mibextid=LQQJ4d"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/explore_malaysian_cuisine/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/MalaysianFlavours"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.youtube.com/account"><i class="uil uil-youtube"></i></a>
+                </div>
+                <a href="/MalaysianFlavours/submit/submit.html" class="srbtn">Submit <i class="fa-solid fa-plus"></i></a>
+            </div>
+        </div>
+        <div class="mainnav">
+            <div class="container flex">
+                <div class="logo flex">
+                    <img src="image/logo2.png" alt="" width="50" height="40">
+                    <h1>Malaysian Flavours</h1>
+                </div>
+                <ul class="navlist flex">
+                    <li><a href="/MalaysianFlavours/index/index.html">Home</a></li>
+                    <li><a href="/MalaysianFlavours/about/about.html">About</a></li>
+                    <li><a href="/MalaysianFlavours/foodCulture/foodCulture.html">Food Culture</a></li>
+                    <li><a href="/MalaysianFlavours/region/region.html">Regional Cuisines</a></li>
+                    <li><a href="/MalaysianFlavours/recipes/recipes.html">Recipes</a></li>
+                    <li><a href="/MalaysianFlavours/Blog/Blog.html">Blog</a></li>
+                    <li><a href="/MalaysianFlavours/term&conditions/t&c.html">Terms&Conditions</a></li>
+                    <li><a href="/MalaysianFlavours/signin/signin.html">Login</a></li>
+                </ul>
+                <div class="searchbar flex">
+                    <input type="checkbox" name="check-toggle" id="checkbox" hidden="">
+                    <label for="checkbox" class="toggle">
+                        <div class="toggle__circle"></div>
+                    </label>
+                    <i class="uil uil-search" id="searchopen"></i>
+                    <div class="navonoff">
+                        <input type="checkbox" id="checkbox2">
+                        <label for="checkbox2" class="toggle2">
+                            <div class="bar bar--top"></div>
+                            <div class="bar bar--middle"></div>
+                            <div class="bar bar--bottom"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="searchinput">
+                    <input type="text" placeholder="Search Here...">
+                    <i class="fa-solid fa-magnifying-glass" id="removesearch"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="headerimg">
+            <div class="container">
+                <div class="headerinfo flex">
+                    <h1 class="headertitle">Nasi Lemak</h1>
+                    <p class="headerpera">Nasi lemak is a dish originating in Malay cuisine that consists of fragrant
+                        rice cooked in coconut milk and pandan leaf. It is commonly found in Malaysia, where it is
+                        considered the national dish. It is also a native dish in neighbouring areas with significant
+                        ethnic Malay populations such as Singapore and Southern Thailand. In Indonesia, it can be found
+                        in several parts of Sumatra, especially the Malay regions of Riau, Riau Islands and Medan.It is
+                        considered an essential dish for a typical Malay-style breakfast. Nasi lemak is featured as a
+                        national dish in Malaysian tourism brochures and promotional materials.</p>
+                    <a href="#" class="headerbtn">VIEW RECIPE<i class="uil uil-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="headerslider container">
+            <div class="slidertitle flex">
+                <h4>My Latest Recipes</h4>
+                <div class="sliderlfbtn">
+                    <button id="sleft"><i class="uil uil-arrow-left"></i></button>
+                    <button id="sright"><i class="uil uil-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="headercards flex">
+                <!--<div class="headercard flex">
+                    <img src="/image/BrownieCookies.jpg" alt="">
+                    <div class="hcardinfo">
+                        <span>Advanced</span>
+                        <h3>Brownie Cookies</h3>
+                    </div>
+                </div>
+                <div class="headercard flex">
+                    <div class="headercard flex">
+                        <img src="/image/BrownieCookies.jpg" alt="">
+                        <div class="hcardinfo">
+                            <span>Advanced</span>
+                            <h3>Brownie Cookies</h3>
+                        </div>
+                    </div>
+                    <div class="headercard flex">
+                        <div class="headercard flex">
+                            <img src="/image/BrownieCookies.jpg" alt="">
+                            <div class="hcardinfo">
+                                <span>Advanced</span>
+                                <h3>Brownie Cookies</h3>
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
+        </section>
+        <section class="threecards container flex">
+            <div class="tcard">
+                <div class="tcardimg">
+                    <img src="image/beansproutschicken.JPG">
+                    <span><i class="fa-solid fa-bookmark"></i></span>
+                </div>
+                <div class="tcardinfo flex">
+                    <label class="tlabel">Meat</label>
+                    <h2>Bean Sprouts Chicken</h2>
+                    <div class="star-rating">
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                    </div>
+                    <p>Nga Choi Gai or Bean Sprouts Chicken (芽菜鸡), is one of the old-school dishes that come to mind at
+                        the mention of Ipoh's famous cuisine. Now, you can savour the authentic tastes of Ipoh at Ipoh
+                        Lou Yau Bean Sprouts Chicken.</p>
+                    <ul class="flex">
+                        <li><i class="fa-solid fa-user"></i>by</li>
+                        <li><i class="fa-solid fa-clock"></i>1 Hour</li>
+                        <li><i class="fa-solid fa-heart"></i>200 Likes</li>
+                    </ul>
+                    <a href="https://www.nofrillsrecipes.com/2009/12/ipoh-bean-sprouts-chicken.html"
+                        class="tcardbtn">Read More</a>
+                </div>
+            </div>
+            <div class="tcard">
+                <div class="tcardimg">
+                    <img src="image/HorFun.webp">
+                    <span><i class="fa-solid fa-bookmark"></i></span>
+                </div>
+                <div class="tcardinfo flex">
+                    <label class="tlabel">Noodle</label>
+                    <h2>Kai See Hor Fun</h2>
+                    <div class="star-rating">
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                    </div>
+                    <p>The secret of this noodle dish lies in the incredibly flavoursome soup coupled with the vividly
+                        orange layer of oil that comes from boiling the prawn heads. A handful of shredded tender
+                        poached chicken, halved shrimps, and chopped chives.</p>
+                    <ul class="flex">
+                        <li><i class="fa-solid fa-user"></i>Mummy's</li>
+                        <li><i class="fa-solid fa-clock"></i>20 Mins</li>
+                        <li><i class="fa-solid fa-heart"></i>180 Likes</li>
+                    </ul>
+                    <a href="https://beyondnorm.com/2020/04/20/ipoh-kai-see-hor-fun-recipe/" class="tcardbtn">Read
+                        More</a>
+                </div>
+            </div>
+            <div class="tcard">
+                <div class="tcardimg">
+                    <img src="image/Bak-Kut-Teh.jpg">
+                    <span><i class="fa-solid fa-bookmark"></i></span>
+                </div>
+                <div class="tcardinfo flex">
+                    <label class="tlabel">Meat</label>
+                    <h2>Bak Kuh Teh</h2>
+                    <div class="star-rating">
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star checked"></i></span>
+                        <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <p>Bak kut teh is a pork rib dish cooked in broth popularly served in Malaysia and Singapore where
+                        there is a predominant Hoklo and Teochew community.The name literally translates from the
+                        Hokkien dialect as "meat bone tea"</p>
+                    <ul class="flex">
+                        <li><i class="fa-solid fa-user"></i>Jane</li>
+                        <li><i class="fa-solid fa-clock"></i>110 Mins</li>
+                        <li><i class="fa-solid fa-heart"></i>146 Likes</li>
+                    </ul>
+                    <a href="https://tasteasianfood.com/bak-kut-" class="tcardbtn">Read More</a>
+                </div>
+            </div>
+        </section>
+        <section class="categoriescards container flex">
+            <a href="https://recipeguru.org/nasi-kandar-the-popular-malaysian-nasi-kandar-recipe/" class="catecard">
+                <div class="cateimg">
+                    <img src="image/nasikandar.png">
+                </div>
+                <div class="catecardinfo flex"></div>
+                <span>Meat, Rice</span>
+                <h3>Nasi Kandar</h3>
+                <p>Nasi kandar is a popular northern Malaysian dish from Penang, originally introduced by Tamil Muslim
+                    traders from India. The meal consists of steamed rice combined with an array of distinct curries,
+                    sides dishes, and gravies. The selection of curries consists of various blends of vegetables,
+                    seafood or meat.</p>
+            </a>
+            <a href="https://www.nyonyacooking.com/recipes/apam-balik~SJ5WuvsDf9WQ" class="catecard">
+                <div class="cateimg">
+                    <img src="image/apambalik.png">
+                </div>
+                <div class="catecardinfo flex"></div>
+                <span>Dessert</span>
+                <h3>Apam Balik</h3>
+                <p>Apam balik (literally means overturned pancake) is made out of simple ingredients. Instead of baking
+                    the butter, it is cooked in a pan and done within minutes. The sweetness is then supported with a
+                    hint of saltiness. Cream corn which is added further enhances the taste of the pancake. </p>
+            </a>
+            <a href="https://www.recipetineats.com/char-kway-teow/" class="catecard">
+                <div class="cateimg">
+                    <img src="image/charkwayteow.png">
+                </div>
+                <div class="catecardinfo flex"></div>
+                <span>Noodle</span>
+                <h3>Char kway teow</h3>
+                <p>Char kway teow is one of the most popular street dishes in Malaysia and Singapore. Despite numerous
+                    regional varieties, it is usually made with flat rice noodles, shrimps, eggs, cockles, bean sprouts,
+                    chives, and Chinese sausage. All the ingredients are usually fried and coated in soy sauce.</p>
+            </a>
+            <a href="https://rasamalaysia.com/nyonya-lam-mee/" class="catecard">
+                <div class="cateimg">
+                    <img src="image/lanmee.jpg">
+                </div>
+                <div class="catecardinfo flex"></div>
+                <span>Noodle</span>
+                <h3>Nyoya Lan Mee</h3>
+                <p>Lam mee is a traditional Malaysian dish of Nyonya people. It's made by cooking yellow rice noodles in
+                    a gravy made from the stock of prawns and chicken or pork ribs. The gravy is the real star of this
+                    dish, with a great mix of seafood flavors from the prawns and sweetness coming from the pork ribs.
+                </p>
+            </a>
+            <a href="https://www.nyonyacooking.com/recipes/kueh-lapis-kuih-lapis~QC8re2dhOy" class="catecard">
+                <div class="cateimg">
+                    <img src="image/kuihlapis.png">
+                </div>
+                <div class="catecardinfo flex"></div>
+                <span>Dessert</span>
+                <h3>Kuih Lapis</h3>
+                <p>While there are many types of kuih, kuih lapis is probably the most visually memorable. It gets its
+                    name from the use of alternating colored layers. There are versions with two layers (e.g., green and
+                    white), while others have a rainbow color palette. </p>
+            </a>
+            <a href="https://www.indianhealthyrecipes.com/goat-curry/" class="catecard">
+                <div class="cateimg">
+                    <img src="image/goatcurry.png">
+                </div>
+                <div class="catecardinfo flex"></div>
+                <span>Meat</span>
+                <h3>Goat Curry</h3>
+                <p>Goat curry that is popular in Malaysia and Indonesia. It is made with a combination of goat meat cut
+                    into chunks, potatoes, tomatoes, curry leaves, ginger, onions, coconut milk, chili peppers, and
+                    various other spices such as galangal.</p>
+            </a>
+            <a href="https://www.lokataste.com/ikan-bakar-recip" class="catecard">
+                <div class="cateimg">
+                    <img src="image/ikanbakar.png">
+                </div>
+                <div class="catecardinfo flex"></div>
+                <span>Meat</span>
+                <h3>Grilled Fish</h3>
+                <p>Perlis is the most northern state in Peninsular Malaysia and with close ties to Thailand, it's no
+                    surprise that many famous Thai dishes are commonly found here. However, the most iconic food here
+                    would have to be ikan bakar. </p>
+            </a>
+            <a href="https://woonheng.com/siew-pau-bbq-buns/" class="catecard">
+                <div class="cateimg">
+                    <img src="image/siewPau.jpg">
+                </div>
+                <div class="catecardinfo flex"></div>
+                <span>Dessert</span>
+                <h3>Siew Pau</h3>
+                <p> One of the most well-known food in Seremban is the flaky baked BBQ pork buns: Seremban Siew Pau.
+                    Unlike its fluffy bun cousin, these have a buttery flaky crust that is baked to perfection with a
+                    sweet and savory filling. It's perfect for an afternoon treat</p>
+            </a>
+        </section>
+        <section class="categrorifilter container flex">
+            <div class="filter flex">
+                <div class="filtername">
+                    <div class="flex">
+                        <i class="uil uil-restaurant"></i>
+                        <h3>Well-known Food</h3>
+                    </div>
+                </div>
+                <div class="filtername">
+                    <div class="flex">
+                        <i class="uil uil-utensils-alt"></i>
+                        <h3> Well-known Food </h3>
+                    </div>
+                </div>
+                <div class="filtername">
+                    <div class="flex">
+                        <i class="uil uil-restaurant"></i>
+                        <h3>Well-known Food </h3>
+                    </div>
+                </div>
+                <div class="filtername">
+                    <div class="flex">
+                        <i class="uil uil-utensils-alt"></i>
+                        <h3> Well-known Food</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="filtercards flex">
+                <div class="tcard">
+                    <div class="tcardimg">
+                        <img src="image/HainaneseChickenRice.png">
+
+                    </div>
+                    <div class="tcardinfo flex">
+                        <label class="Hainanese Chicken Rice"></label>
+                        <h2>Hainanese Chicken Rice</h2>
+                        <div class="star-rating">
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                        </div>
+                        <p>Hainan Chicken Rice is a classic dish beloved by people in Singapore and all over Asia.
+                            Served room temperature, the chicken is incredibly silky. But the rice is really the
+                            star—cooked in the broth from poaching the chicken, served with a trio of condiments.
+                            Hainanese chicken rice has become a famous dish but it's especially popular in South East
+                            Asian countries like Singapore, Malaysia and Thailand.</p>
+                        <ul class="flex">
+                            <li><i class="fa-solid fa-user"></i>Judy</li>
+                            <li><i class="fa-solid fa-clock"></i>155 Mins</li>
+                            <li><i class="fa-solid fa-heart"></i>190 Likes</li>
+                        </ul>
+                        <a href="https://thewoksoflife.com/hainanese-chicken-rice/" class="catecarbtn">Read More <i
+                                class="uil uil-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="tcard">
+                    <div class="tcardimg">
+                        <img src="image/yongTauFoo.png">
+
+                    </div>
+                    <div class="tcardinfo flex">
+                        <label class="Yong Tau Foo"></label>
+                        <h2>Yong Tau Foo</h2>
+                        <div class="star-rating">
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star"></i></span>
+                        </div>
+                        <p>Yong tau foo is a Chinese cuisine that has become one of Malaysia's most famous street foods.
+                            It is a Hakka Chinese food, and the word in Chinese 酿豆腐 means stuffed tofu. This Chinese
+                            cuisine has evolved in Malaysia with its interpretation, including various vegetables
+                            besides tofu. They are either deep-fried, pan-fried, or served by boiling in soup stock and
+                            with a dipping sauce or curry..</p>
+                        <ul class="flex">
+                            <li><i class="fa-solid fa-user"></i>KP Kwan</li>
+                            <li><i class="fa-solid fa-clock"></i>40 Mins</li>
+                            <li><i class="fa-solid fa-heart"></i>100 Likes</li>
+                        </ul>
+                        <a href="https://tasteasianfood.com/yong-tau-foo/" class="catecarbtn">Read More <i
+                                class="uil uil-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="tcard">
+                    <div class="tcardimg">
+                        <img src="image/PenangHokkienMee.jpg">
+
+                    </div>
+                    <div class="tcardinfo flex">
+                        <label class="Penang Hokkien Mee"></label>
+                        <h2>Penang Hokkien Mee</h2>
+                        <div class="star-rating">
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                        </div>
+                        <p>Penang Hokkien mee (Prawn Noodle) or Hae Mee, as known to the locals, is a soupy yellow egg
+                            noodle dish with prawns. Popular in Penang, Malaysia, the broth of these noodles has a rich
+                            prawn flavour. Accompanied with boiled egg, kangkung (water spinach), bean spouts, fried
+                            shallots and the special sambal, each bite delivers an orchestra of flavours. You can also
+                            add other toppings that you prefer.</p>
+                        <ul class="flex">
+                            <li><i class="fa-solid fa-user"></i>Bee Yinn</li>
+                            <li><i class="fa-solid fa-clock"></i>160 Mins</li>
+                            <li><i class="fa-solid fa-heart"></i>300 Likes</li>
+                        </ul>
+                        <a href="https://www.nyonyacooking.com/recipes/penang-hokkien-mee-prawn-noodles~eOZKBUKuP0"
+                            class="catecarbtn">Read More <i class="uil uil-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="featurerecipe container flex">
+            <div class="featuredtitles flex">
+                <div class="titleicon">
+                    <img src="image/logo.png">
+                </div>
+                <h1>Featured Recipes</h1>
+                <p>Whether you are looking for easy weeknight dinner recipes, or fast and fresh
+                    recipes, here is a delicious selection!</p>
+            </div>
+            <div class="featuredcards flex">
+                <div class="fcard">
+                    <div class="fcardimg">
+                        <img src="image/meegoreng.webp">
+                        <div class="fauthorname">
+                            <img src="image/author2.jpg">
+                            <div class="fauth">
+                                <h5>Bee Yinn Low</h5>
+                                <p>1500 ++ Recipe</p>
+                            </div>
+                        </div>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="fcardinfo flex">
+                        <div class="star-rating">
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                        </div>
+                        <label>Beginner</label>
+                        <h2>Mee Goreng</h2>
+                        <p>Mee Goreng is one of the most popular fried noodle dishes in Malaysia and Indonesia. This
+                            Indian Mamak Mee Goreng recipe is authentic, easy and so good!</p>
+                        <a href="https://rasamalaysia.com/recipe-indian-mee-goreng/" class="fcardbtn">Read More <i
+                                class="uil uil-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="fcard">
+                    <div class="fcardimg">
+                        <img src="image/beefRendang.webp">
+                        <div class="fauthorname">
+                            <img src="image/author3.webp">
+                            <div class="fauth">
+                                <h5>Nagi</h5>
+                                <p>1000 ++ Recipe</p>
+                            </div>
+                        </div>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="fcardinfo flex">
+                        <div class="star-rating">
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                            <span><i class="fa-solid fa-star checked"></i></span>
+                        </div>
+                        <label>Advanced</label>
+                        <h2>Beef Rendang</h2>
+                        <p>Beef Rendang is a Malaysian curry and is considered by many to be the king of all curries! To
+                            say it's extravagantly delicious is an understatement.</p>
+                        <a href="https://www.recipetineats.com/beef-rendang/" class="fcardbtn">Read More
+                            <i class="uil uil-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gfbg">
+        </section>
+        <section class="breakfastsec container flex">
+            <div class="lestsidesec">
+                <div class="leftboxtitle">
+                    <h1>Enjoy breakfast</h1>
+                    <p>There is no better morning than one that starts with good food. An authentic Malaysian breakfast
+                        menu is packed with sweet, spicy, and savory dishes that draw vast influence from Indonesian and
+                        Chinese dishes. </p>
+                </div>
+                <div class="leftposts flex">
+                    <div class="tcard">
+                        <div class="tcardimg">
+                            <img src="image/dimsum.jpeg">
+                            <span><i class="fa-solid fa-bookmark"></i></span>
+                        </div>
+                        <div class="tcardinfo flex">
+                            <label class="tlabel">Breakfast</label>
+                            <h1>Dim Sum</h1>
+                            <div class="star-rating">
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                            </div>
+                            <p>Dim sum is a large range of small Chinese dishes that are traditionally enjoyed in
+                                restaurants for brunch, with many varieties of small-plate Chinese foods, usually meat
+                                or vegetables in dough or a wrapper that is steamed, deep-fried or
+                                pan-fried.</p>
+                            <ul class="flex">
+                                <li><i class="fa-solid fa-user"></i>Bill's Family</li>
+                                <li><i class="fa-solid fa-clock"></i>1 Hour</li>
+                                <li><i class="fa-solid fa-heart"></i>200 Likes</li>
+                            </ul>
+                            <a href="https://thewoksoflife.com/category/recipes/dim-sum/" class="tcardbtn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="tcard">
+                        <div class="tcardimg">
+                            <img src="image/kayatoast.webp">
+                            <span><i class="fa-solid fa-bookmark"></i></span>
+                        </div>
+                        <div class="tcardinfo flex">
+                            <label class="tlabel">Breakfast</label>
+                            <h1>Kaya Toast </h1>
+                            <div class="star-rating">
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                            </div>
+                            <p>Kaya toast is a dish consisting of two slices of toast with butter and kaya, commonly
+                                served alongside kopi and soft-boiled eggs. The dish was believed to be created by
+                                Hainanese immigrants to the Straits Settlements in the 19th century while serving on
+                                British ships.</p>
+                            <ul class="flex">
+                                <li><i class="fa-solid fa-user"></i>Bee Yinn</li>
+                                <li><i class="fa-solid fa-clock"></i>5 Mins</li>
+                                <li><i class="fa-solid fa-heart"></i>180 Likes</li>
+                            </ul>
+                            <a href="https://rasamalaysia.com/kaya-toast/" class="tcardbtn">Read More</a>
+                        </div>
+                    </div>
+                    <div class="tcard">
+                        <div class="tcardimg">
+                            <img src="image/porridge.jpg">
+                            <span><i class="fa-solid fa-bookmark"></i></span>
+                        </div>
+                        <div class="tcardinfo flex">
+                            <label class="tlabel">Breakfast</label>
+                            <h1>Porridge</h1>
+                            <div class="star-rating">
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star checked"></i></span>
+                                <span><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <p>Porridge is a warm, comforting dish made by boiling grains, typically oats, in water or
+                                milk until they become soft and creamy. It's a versatile dish enjoyed around the world,
+                                often served as a hearty breakfast or a soothing meal.</p>
+                            <ul class="flex">
+                                <li><i class="fa-solid fa-user"></i>Jam Oliver</li>
+                                <li><i class="fa-solid fa-clock"></i>10 Mins</li>
+                                <li><i class="fa-solid fa-heart"></i>146 Likes</li>
+                            </ul>
+                            <a href="https://www.jamieoliver.com/recipes/fruit-recipes/porridge-lots-of-ways/"
+                                class="tcardbtn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="youradvertise">
+                    <h1>Place Your Advertisements Here</h1>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
+    <link rel="icon" type="image/png" href="../index/image/logo.png">
+    <link rel="stylesheet" href="../recipes/CSS/header-style.css">
+    <link rel="stylesheet" href="../recipes/CSS/body-style.css">
+</head>
+
+<body>
+    <div id="navbar-menu" class="navbar-menu">
+        <div class="navbar-menu-top">
+            <h2><strong>Recipe Categories</strong></h2>
+        </div>
+        <button class="close-btn" id="close-btn">&times;</button>
+        
+        <br>
+
+        <section class="navbar-menu-content">
+            <div class="content-container">
+
+                <div class="category-section">
+                    <a href="#west-malaysia"><div><h4><strong>West Malaysia</strong></h4></div></a>
+                    <ul class="category-list">
+                        <li><a href="#Johor">Johor</a></li>
+                        <li><a href="#Kedah">Kedah</a></li>
+                        <li><a href="#Kelantan">Kelantan</a></li>
+                        <li><a href="#Melacca">Melacca</a></li>
+                        <li><a href="#Negeri-Sembilan">Negeri Sembilan</a></li>
+                        <li><a href="#Pahang">Pahang</a></li>
+                        <li><a href="#Penang">Penang</a></li>
+                        <li><a href="#Perak">Perak</a></li>
+                        <li><a href="#Perlis">Perlis</a></li>
+                        <li><a href="#Selangor">Selangor</a></li>
+                        <li><a href="#Terengganu">Terengganu</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="navbar-menu-content">
+            <div class="content-container">
+
+                <div class="category-section">
+                    <a href="#east-malaysia"><h4><strong>East Malaysia</strong></h4></a>
+                    <ul class="category-list">
+                        <li><a href="#Sabah">Sabah</a></li>
+                        <li><a href="#Sarawak">Sarawak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <header>
+        <!-- Navbar -->
+        <div class="header">
+            <img src="../index/image/logo.png" alt=" " class="header-logo">
+
+            <nav class="search-form">
+                <form action="/search" method="GET">
+                    <div class="search-container">
+                        <input type="text" name="q" class="search-input" placeholder="Search food...">
+
+                        <!--Search Icon-->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                    </div>
+
+                </form>
+
+            </nav>
+
+
+            <nav class="header-content">
+
+                <ul>
+                    <li><a href="../index/index.html">Home</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="../foodCulture/foodCulture.html ">Food Culture</a></li>
+                    <li><a href="../region/region.html">Regional Cuisines</a></li>
+                    <li><a href="../recipes/recipes.html">Recipes</a></li>
+                    <li><a href="../Blog/Blog.html">Blog</a></li>
+                    <li><a href="../signin.html" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+
+            <div id="navbar-toggler-container">
+                <button class="navbar-toggler" id="navbar-toggler">
+                    &#9776; <!-- Hamburger Icon -->
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+        <section class="recipe-title">
+            <h1>Malaysia Cuisine Recipe</h1>
+        </section>
+
+        <section class="Malaysia">
+            <a href="#west-malaysia"><img class="malaysia-image" src="../index/image/WM.png" alt="West Malaysia"></a>
+            <a href="#east-malaysia"><img class="malaysia-image" src="../index/image/EM.png" alt="East Malaysia"></a>
+        </section>
+        
+        <div class="marquee">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                    <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                  </svg>
+                   Malaysia Cuisine Recipe 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                    <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                  </svg>&nbsp;&nbsp;&nbsp;
+                  Malaysia Cuisine Recipe 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                    <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                  </svg>&nbsp;&nbsp;&nbsp;
+                  Malaysia Cuisine Recipe 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-stars" viewBox="0 0 16 16">
+                    <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                  </svg>
+            </span>
+        </div>
+
+        <section>
+            <div class="featured-recipes">
+                <h1><strong>Featured Cuisine Recipes</strong></h1>
+            </div>
+            
+            <div class="featured-recipes-img-container">
+
+                
+                <div class="recipe-card position-relative">
+                    <a href="../recipes/recipes-site/nasi-lemak.html">
+                        <img src="../index/image/nasi-lemak.jpg" alt="Food Image">
+                    </a>
+                    <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                        <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                        </svg>
+                        <!-- Filled Heart SVG (hidden by default) -->
+                        <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <a href="../recipes/recipes-site/nasi-lemak.html">
+                        <div class="recipe-info">
+                            <h2>Nasi Lemak</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="recipe-card position-relative">
+
+                    <a href="../recipes/recipes-site/rendang-chicken.html">
+                        <img src="../index/image/rendang.jpg" alt="Food Image">
+                    </a>
+                    <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                        <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                        </svg>
+                        <!-- Filled Heart SVG (hidden by default) -->
+                        <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <a href="../recipes/recipes-site/rendang-chicken.html">
+                        <div class="recipe-info">
+                            <h2>Rendang Chicken</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="recipe-card position-relative">
+                    <a href="../recipes/recipes-site/mee-goreng.html">
+                        <img src="../index/image/mee-goreng.jpg" alt="Food Image">
+                    </a>
+                    <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                        <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                        </svg>
+                        <!-- Filled Heart SVG (hidden by default) -->
+                        <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+                    <a href="../recipes/recipes-site/mee-goreng.html">
+                        <div class="recipe-info">
+                            <h2>Mee Goreng</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="recipe-card position-relative">
+
+                    <a href="../recipes/recipes-site/char-kway-teow.html">
+                        <img src="../index/image/char-kway-teow.jpg" alt="Food Image">
+                    </a>
+                    <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                        <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                        </svg>
+                        <!-- Filled Heart SVG (hidden by default) -->
+                        <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+
+                    <a href="../recipes/recipes-site/char-kway-teow.html">
+                        <div class="recipe-info">
+                            <h2>Char Kway Teow</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="recipe-card position-relative">
+
+                    <a href="../recipes/recipes-site/laksa.html">
+                        <img src="../index/image/laksa.jpg" alt="Food Image">
+                    </a>
+                    <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                        <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                        </svg>
+                        <!-- Filled Heart SVG (hidden by default) -->
+                        <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+
+                    <a href="../recipes/recipes-site/laksa.html">
+                        <div class="recipe-info">
+                            <h2>Laksa</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="recipe-card position-relative">
+
+                    <a href="../recipes/recipes-site/satay.html">
+                        <img src="../index/image/satay.jpg" alt="Food Image">
+                    </a>
+
+                    <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                        <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                        </svg>
+                        <!-- Filled Heart SVG (hidden by default) -->
+                        <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </div>
+
+                    <a href="../recipes/recipes-site/satay.html">
+                        <div class="recipe-info">
+                            <h2>Satay</h2>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="west-malaysia-container" id="west-malaysia">
+            <div class="west-malaysia-title">
+                <h1>West Malaysia</h1>
+            </div>
+
+            <section class="states-container">
+                <div class="state-title" id="Johor">
+                    <h2>Johor</h2>
+                    
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/johor/mee-rebus.html">
+                            <img src="../region/image/meerebus.jpg" alt="Johor Recipe 1">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/johor/mee-rebus.html">
+                            <div class="recipe-info">
+                                <h2>Mee Rebus</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/johor/kway-chap.html">
+                            <img src="../region/image/kway-chap.jpg" alt="Johor Recipe 2">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/johor/kway-chap.html">
+                            <div class="recipe-info">
+                                <h2>Kway Chap</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/johor/kacang-pool-haji.html">
+                            <img src="../region/image/kacang pool haji.jpg" alt="Johor Recipe 2">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/johor/kacang-pool-haji.html">
+                            <div class="recipe-info">
+                                <h2>Kacang Pool Haji</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative d-none">
+                        <a href="../recipes/recipes-site/johor/lontong-kering.html">
+                            <img src="../region/image/lontong kering.jpg" alt="Johor Recipe 2">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/johor/lontong-kering.html">
+                            <div class="recipe-info">
+                                <h2>Lontong Kering Johor</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+
+                        <div class="show-less-btn-container">
+                            <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                        </div>
+                    </div>
+
+            </section>
+            
+            <section class="states-container">
+                <div class="state-title" id="Kedah">
+                    <h2>Kedah</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/kedah/chai-por-hu.html">
+                            <img src="../region/image/chai por hu.jpg" alt="Kedah Recipe 1">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/kedah/chai-por-hu.html">
+                            <div class="recipe-info">
+                                <h2>Chai Por Hu</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/crab noodle.jpg" alt="Kedah Recipe 2">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Crab Noodle</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/pekasam.jpg" alt="Kedah Recipe 2">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class=" heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Pekasam Ikan Puyu</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/nasi ulam.webp" alt="Kedah Recipe 2">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Nasi Ulam</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+
+            <section class="states-container">
+                <div class="state-title" id="Kelantan">
+                    <h2>Kelantan</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/kelantan/nasi-kerabu.html">
+                            <img src="../region/image/nasi kerabu.gif" alt="Kelantan Recipe 1">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/kelantan/nasi-kerabu.html">
+                            <div class="recipe-info">
+                                <h2>Nasi Kerabu</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/nasi dagang.avif" alt="Kelantan Recipe 2">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../region/image/nasi dagang.avif">
+                            <div class="recipe-info">
+                                <h2>Nasi Dagang</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/laksam.jpg" alt="Kelantan Recipe 2">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class=" heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Laksam</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/akok.webp" alt="Kelantan Recipe 2">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Kuih Akok</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/lompat tikam.jpg" alt="Kelantan Recipe 2">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Lompat Tikam</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+
+            <section class="states-container">
+                <div class="state-title" id="Melacca">
+                    <h2>Melacca</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/melacca/chicken-rice-ball.html">
+                            <img src="../region/image/Chicken-Rice-Ball.jpg" alt="Melacca Recipe 1">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/melacca/chicken-rice-ball.html">
+                            <div class="recipe-info">
+                                <h2>Chicken Rice Ball</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/chendol.webp" alt="Melacca Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Chendol</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/coconut shake.jpg" alt="Melacca Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Coconut Shake</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/satay celup.jpg" alt="Melacca Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Satay Celup</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/nyonya laksa.jpg" alt="Melacca Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Nyonya Laksa</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+
+            <section class="states-container">
+                <div class="state-title" id="Negeri-Sembilan">
+                    <h2>Negeri Sembilan</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/negeri-sembilan/siew-pau.html">
+                            <img src="../region/image/siew pau.jpg" alt="Negeri Sembilan Recipe 1">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/negeri-sembilan/siew-pau.html">
+                            <div class="recipe-info">
+                                <h2>Siew Pau</h2>
+                            </div>
+                        </a>
+                    </div>         
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/mihun sotong.jpg" alt="Negeri Sembilan Recipe 1">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Mihun Sotong</h2>
+                            </div>
+                        </a>
+                    </div> 
+
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/scallop fish ball noodle.jpg" alt="Negeri Sembilan Recipe 1">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Scallop Fish Ball Noodles</h2>
+                            </div>
+                        </a>
+                    </div> 
+
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/yipoh noodle.jpg" alt="Negeri Sembilan Recipe 1">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Yi Po Lao Shu Fen</h2>
+                            </div>
+                        </a>
+                    </div> 
+
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/grilled crab.jpg" alt="Negeri Sembilan Recipe 1">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Grilled Crab</h2>
+                            </div>
+                        </a>
+                    </div> 
+                    
+                    
+                    
+
+                    
+                </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+
+            <section class="states-container">
+                <div class="state-title" id="Pahang">
+                    <h2>Pahang</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/pahang/royal-puding.html">
+                            <img src="../region/image/royal pudding.jpg" alt="Pahang Recipe">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/pahang/royal-puding.html">
+                            <div class="recipe-info">
+                                <h2>Royal Puding</h2>
+                            </div>
+                        </a>
+                    </div>  
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/patin tempoyak.jpeg" alt="Pahang Recipe">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Patin Tempoyak</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/nasi kebuli.webp" alt="Pahang Recipe">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Nasi Kebuli Gulai</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+
+
+                </div>
+             
+            </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+
+            <section class="states-container">
+                <div class="state-title" id="Penang">
+                    <h2>Penang</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/laksa.html">
+                            <img src="../region/image/penanglaksa.jpg" alt="Penang Recipe 1">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/laksa.html">
+                            <div class="recipe-info">
+                                <h2>Penang Laksa</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/char-kway-teow.html">
+                            <img src="../region/image/charkueyteow.jpg" alt="Penang Recipe">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/char-kway-teow.html">
+                            <div class="recipe-info">
+                                <h2>Char Keow Tiao</h2>
+                            </div>
+                        </a>
+                    </div>     
+
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/yamrice.jpg" alt="Penang Recipe">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Yam Rice</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+
+
+                    
+                </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+
+            <section class="states-container">
+                <div class="state-title" id="Perak">
+                    <h2>Perak</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/perak/ipoh-hor-fun.html">
+                            <img src="../region/image/horfun.jpg" alt="Perak Recipe">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/perak/ipoh-hor-fun.html">
+                            <div class="recipe-info">
+                                <h2>Ipoh Hor Fun</h2>
+                            </div>
+                        </a>
+                    </div>    
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/tofuhua.jpg" alt="Perak Recipe">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Tau Fu Fah</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/saltedchicken.jpg" alt="Perak Recipe">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Salted Chicken</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+
+            <section class="states-container">
+                <div class="state-title" id="Perlis">
+                    <h2>Perlis</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/perlis/pulut-mempelam.html">
+                            <img src="../region/image/Pulut Mempelam.webp" alt="Perlis Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/perlis/pulut-mempelam.html">
+                            <div class="recipe-info">
+                                <h2>Pulut Mempelam</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/ikan bakar.webp" alt="Perlis Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Ikan Bakar</h2>
+                            </div>
+                        </a>
+                    </div> 
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/lokching.jpg" alt="Selangor Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Lokching</h2>
+                            </div>
+                        </a>
+                    </div>   
+                    
+                </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+
+            <section class="states-container">
+                <div class="state-title" id="Selangor">
+                    <h2>Selangor</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/selangor/satay-kajang.html">
+                            <img src="../region/image/satay.jpg" alt="Selangor Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/satay.html">
+                            <div class="recipe-info">
+                                <h2>Satay Kajang</h2>
+                            </div>
+                        </a>
+                    </div>     
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/bamboobiryani.jpg" alt="Selangor Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Bamboo Biryani</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/bananaleafrice.webp" alt="Selangor Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Banana Leaf Rice</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/bakkuteh.jpg" alt="Selangor Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Bak Kut Teh</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+
+                    
+                </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+
+            <section class="states-container">
+                <div class="state-title" id="Terengganu">
+                    <h2>Terengganu</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/terengganu/keropok-lekor.htm">
+                            <img src="../region/image/keropok lekor.jpg" alt="Terengganu Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/terengganu/keropok-lekor.htm">
+                            <div class="recipe-info">
+                                <h2>Keropok Lekor</h2>
+                            </div>
+                        </a>
+                    </div> 
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/ketupat sotong.jpg" alt="Terengganu Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Ketupat Sotong</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/bubur lambuk.webp" alt="Terengganu Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Bubur Lambuk</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/nasi minyak.webp" alt="Terengganu Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Nasi Minyak Terengganu</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+
+
+        </section>
+
+
+        <section class="east-malaysia-container" id="east-malaysia">
+            <div class="east-malaysia-title">
+                <h1>East Malaysia</h1>
+            </div>
+
+            <section class="states-container">
+                <div class="state-title" id="Sabah">
+                    <h2>Sabah</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/sabah/linopot.html">
+                            <img src="../region/image/linopot.jpg" alt="Sabah Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/sabah/linopot.html">
+                            <div class="recipe-info">
+                                <h2>Linopot</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/tuaran mee.jpg" alt="Sabah Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Tuaran Mee</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/pork noodle.jpg" alt="Sabah Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Pork Noodles</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/hinava.jpg" alt="Sabah Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Hinava</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/ambuyat.jpg" alt="Sabah Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Ambuyat</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    
+                </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+
+            <section class="states-container">
+                <div class="state-title" id="Sarawak">
+                    <h2>Sarawak</h2>
+                    <div>
+                        <button class="showAllBtn btn btn-primary mt-3">Show All</button>
+                    </div>
+                    <div class="show-less-btn-container">
+                        <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                    </div>
+                    
+                </div>
+                <hr>
+
+                <div class="state-recipes">
+                    <div class="recipe-card position-relative">
+                        <a href="../recipes/recipes-site/sarawak/kolo-mee.html">
+                            <img src="../region/image/kolo mee.jpg" alt="Sarawak Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="../recipes/recipes-site/sarawak/kolo-mee.html">
+                            <div class="recipe-info">
+                                <h2>Kolo Mee</h2>
+                            </div>
+                        </a>
+                    </div>  
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/SarawakLaksa.jpg" alt="Sarawak Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Sarawak Laksa</h2>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="recipe-card position-relative">
+                        <a href="#">
+                            <img src="../region/image/ayam pansuh.webp" alt="Sarawak Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Ayam Pansuh</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/umai.jpg" alt="Sarawak Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Umai</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="recipe-card position-relative d-none">
+                        <a href="#">
+                            <img src="../region/image/misin.webp" alt="Sarawak Recipe ">
+                        </a>
+                        <div class="favorite-btn position-absolute top-0 end-0 m-2">
+                            <svg class="heart-icon outline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="white" fill="none"/>
+                            </svg>
+                            <svg class="heart-icon filled d-none" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                        </div>
+                        <a href="#">
+                            <div class="recipe-info">
+                                <h2>Midin</h2>
+                            </div>
+                        </a>
+                    </div>
+
+                    
+                </div>
+
+                <div class="show-less-btn-container">
+                    <button class="showLessBtn btn btn-secondary d-none mt-3">Show Less</button>
+                </div>
+            </section>
+            
+
+        </section>
+
+        <section class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <hr>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/explore_malaysian_cuisine/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/explore_malaysian_cuisine/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://t.me/MalaysianFlavours" target="_blank">
+                            <i class="fab fa-telegram-plane"></i> 
+                        </a>
+                    </div>
+                    <div class="footer-copy">
+                        <p>&copy; 2024 Malaysian Flavours. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <a href="#" class="back-to-top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 12a.5.5 0 0 1-.5-.5V3.707L4.854 6.354a.5.5 0 1 1-.708-.708l4-4a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1-.708.708L8.5 3.707V11.5a.5.5 0 0 1-.5.5z"/>
+            </svg>
+        </a>
+
+
+
+    </main>
+
+
+    <script src="../recipes/JS/header-search-container.js"></script>
+    <script src="../recipes/JS/header-navbar-toggler.js"></script>
+    <script src="../recipes/JS/body-favorite-btn.js"></script>
+    <script src="../recipes/JS/body-showAll-btn.js"></script>
+    <script src="../recipes/JS/body-back-to-top.js"></script>
+</body>
+
+</html>

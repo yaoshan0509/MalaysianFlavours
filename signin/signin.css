@@ -1,0 +1,304 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora');  
+
+:root {  
+    --dark-green: #2C5F2D;  
+    --medium-green: #97BC62;  
+    --light-green: #CAE7B9;  
+    --white: #F3FCE8;  
+    --accent-green: #4CAF50;  
+}  
+
+body {  
+    background: var(--medium-green);  
+    font-family: 'Open Sans', sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    min-height: 100vh;  
+}  
+
+.container {  
+    width: 650px;  
+    height: 550px;  
+    position: relative;  
+}  
+
+.welcome {  
+    background: var(--white);  
+    width: 100%;  
+    height: 415px;  
+    position: absolute;  
+    top: 25%;  
+    border-radius: 5px;  
+    box-shadow: 5px 5px 5px rgba(0,0,0,.1);  
+}  
+
+.greenbox {  
+    position: absolute;  
+    top: -10%;  
+    left: 5%;  
+    background: var(--light-green);  
+    width: 320px;  
+    height: 500px;  
+    border-radius: 5px;  
+    box-shadow: 2px 0 10px rgba(0,0,0,.1);  
+    transition: all .5s ease-in-out;  
+    z-index: 2;  
+}  
+
+.nodisplay {  
+    display: none;  
+    transition: all .5s ease;  
+}  
+
+.leftbox, .rightbox {  
+    position: absolute;  
+    width: 50%;  
+    transition: 1s all ease;  
+}  
+
+.leftbox { left: -2%; }  
+.rightbox { right: -2%; }  
+
+h1, h2 {  
+    font-family: 'Lora', serif;  
+    text-align: center;  
+    text-transform: uppercase;  
+    color: var(--white);  
+    font-size: 2em;  
+    letter-spacing: 8px;  
+}  
+
+.title {  
+    color: var(--dark-green);  
+    font-size: 1.8em;  
+    line-height: 1.1em;  
+    letter-spacing: 3px;  
+    text-align: center;  
+    font-weight: 300;  
+    margin-top: 20%;  
+    margin-bottom: 100px; 
+}  
+.desc {  
+    margin-bottom: 100px;  
+}  
+
+p {  
+    font-size: .7em;  
+    letter-spacing: 2px;  
+    color: var(--dark-green);  
+    text-align: center;  
+}  
+
+span { color: var(--accent-green); }  
+
+.img {  
+    position: absolute;  
+    width: 120px;  
+    height: auto;  
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+    opacity: 0.7;  
+}   
+
+.smaller {  
+    width: 90px;  
+    height: 100px;  
+    top: 48%;  
+    left: 38%;  
+    opacity: .9;  
+}  
+
+button {  
+    padding: 12px;  
+    font-family: 'Open Sans', sans-serif;  
+    text-transform: uppercase;  
+    letter-spacing: 3px;  
+    font-size: 11px;  
+    border-radius: 10px;  
+    margin: auto;  
+    outline: none;  
+    display: block;  
+    cursor: pointer;  
+}  
+
+button:hover {  
+    background: var(--light-green);  
+    color: var(--dark-green);  
+    transition: background-color 1s ease-out;  
+}  
+
+.button {  
+    margin-top: 3%;  
+    background: var(--white);  
+    color: var(--accent-green);  
+    border: solid 1px var(--light-green);  
+}  
+
+form {  
+    display: flex;  
+    align-items: center;  
+    flex-direction: column;  
+    padding-top: 7px;  
+}  
+
+.more-padding {  
+    padding-top: 35px;  
+}  
+
+.more-padding input {  
+    padding: 12px;  
+}  
+
+.more-padding .submit {  
+    margin-top: 45px;  
+}  
+
+.submit {  
+    margin-top: 25px;  
+    padding: 12px;  
+    border-color: var(--accent-green);  
+}  
+
+.submit:hover {  
+    background: var(--medium-green);  
+    border-color: var(--dark-green);  
+}  
+
+input {  
+    background: var(--light-green);  
+    width: 65%;  
+    color: var(--dark-green);  
+    border: none;  
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);  
+    padding: 9px;  
+    margin: 7px;  
+}  
+
+input::placeholder {  
+    color: rgba(44, 95, 45, 0.7);  
+    letter-spacing: 2px;  
+    font-size: 1.3em;  
+    font-weight: 100;  
+}  
+
+input:focus {  
+    color: var(--dark-green);  
+    outline: none;  
+    border-bottom: 1.2px solid rgba(44, 95, 45, 0.7);  
+    font-size: 1em;  
+    transition: .8s all ease;  
+}  
+
+input:focus::placeholder {  
+    opacity: 0;  
+}  
+
+label {  
+    font-family: 'Open Sans', sans-serif;  
+    color: var(--dark-green);  
+    font-size: 0.8em;  
+    letter-spacing: 1px;  
+}  
+
+.checkbox {  
+    display: inline;  
+    white-space: nowrap;  
+    position: relative;  
+    left: -62px;  
+    top: 5px;  
+}  
+
+input[type=checkbox] {  
+    width: 7px;  
+    background: var(--accent-green);  
+}  
+
+.checkbox input[type="checkbox"]:checked + label {  
+    color: var(--accent-green);  
+    transition: .5s all ease;  
+}  
+
+.signup-prompt {  
+    position: absolute;  
+    bottom: 20px;  
+    left: 0;  
+    right: 0;  
+    text-align: center;  
+}
+
+@media (max-width: 767px) { 
+    body {  
+        overflow: hidden;  
+      }  
+
+    .container {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    height: 100vh;  
+    padding: 20px;  
+    }  
+  
+    .welcome {  
+      width: 100%;  
+      max-width: 400px;  
+      background-color: #fff;  
+      border-radius: 10px;  
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);  
+      padding: 20px;  
+      order: 2;  
+    }  
+  
+    .greenbox {  
+      width: 80%;  
+      max-width: 320px;  
+      border-radius: 10px;  
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);  
+      padding: 30px 20px;  
+      order: 1;  
+      margin-bottom: 20px;  
+    }  
+  
+    h1 {  
+      font-size: 24px;  
+      margin-bottom: 20px;  
+      text-align: center;  
+    }  
+  
+    form {  
+      width: 100%;  
+    }  
+  
+    input {  
+      width: 100%;  
+      font-size: 16px;  
+      padding: 12px 16px;  
+      margin-bottom: 16px;  
+      border: 1px solid #ddd;  
+      border-radius: 5px;  
+    }  
+  
+    .checkbox {  
+      font-size: 14px;  
+      margin-bottom: 16px;  
+    }  
+  
+    .button {  
+      width: 100%;  
+      font-size: 16px;  
+      padding: 12px 16px;  
+      border-radius: 5px;  
+      cursor: pointer;  
+    }  
+   
+    .account {  
+      margin-right: 8px;  
+    }  
+
+  }

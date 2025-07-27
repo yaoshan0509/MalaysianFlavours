@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Header -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Submit page</title>
+    <link rel="icon" href="image/submit.webp">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="css/submit.css" />
+</head>
+<!-- End of header -->
+
+<body>
+    <!-- Hero section -->
+    <div class="hero d-flex align-items-center justify-content-start vw-100 vh-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xm-12 mx-auto">
+
+                    <!-- Subheading -->
+                    <span class="d-block mb-3" id="subheading">
+                        <h3>Be a food lover</h3>
+                    </span>
+                    <!-- End of subheading -->
+
+                    <!-- Heading -->
+                    <h1 class="display-3 mb-4">
+                        Welcome To <br />
+                        <span id="heading">Submit Page</span>
+                    </h1>
+                    <!-- End of heading -->
+
+                    <!-- Description -->
+                    <p class="mb-4" id="description">
+                        Submit Cuisine Recipe and Image. <br />
+                        Let's Explore Malaysian Cuisine together.
+                    </p>
+                    <!-- End of description -->
+
+                    <!-- Button -->
+                    <div class="mt-5">
+                        <a href="#form" class="btn px-5 py-3">Get Started</a>
+                    </div>
+                    <!-- End of button -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of hero section -->
+
+
+    <!-- Section break -->
+    <section id="section-break">
+
+    </section>
+    <!-- End of section break -->
+
+    <!-- Page content -->
+    <section id="page-content">
+        <div class="container d-flex justify-content-center align-items-center">
+            <form class="p-4 m-5 rounded-5 vw-100 needs-validation" action="/submit-recipe" type="get" id="form"
+                novalidate>
+
+                <!-- First name -->
+                <div class="mb-5">
+                    <label for="firstName" class="form-label">
+                        <h5>First Name</h5>
+                    </label>
+                    <input type="text" class="form-control" id="firstName" required />
+                    <div class="invalid-feedback">
+                        Please enter your first name
+                    </div>
+                    <div class="valid-feedback">
+                        Looks great!
+                    </div>
+                </div>
+                <!-- End of first name -->
+
+                <!-- Last name -->
+                <div class="mb-5">
+                    <label for="lastName" class="form-label">
+                        <h5>Last Name</h5>
+                    </label>
+                    <input type="text" class="form-control" id="lastName" required />
+                    <div class="invalid-feedback">
+                        Please enter your last name
+                    </div>
+                    <div class="valid-feedback">
+                        Looks great!
+                    </div>
+                </div>
+                <!-- End of last name -->
+
+                <!-- Email -->
+                <div class="mb-5">
+                    <label for="email" class="form-label">
+                        <h5>Email Address</h5>
+                    </label>
+                    <input type="email" class="form-control" id="email" placeholder="email@example.com"
+                        autocomplete="email" required />
+                    <div class="invalid-feedback">
+                        Please enter your email
+                    </div>
+                    <div class="valid-feedback">
+                        Looks great!
+                    </div>
+                </div>
+                <!-- End of email -->
+
+                <!-- Telephone No. -->
+                <div class="mb-5">
+                    <label for="contactNo" class="form-label">
+                        <h5>Contact No.</h5>
+                    </label>
+                    <input type="tel" class="form-control" id="contactNo" placeholder="XXX-XXXXXXXX"
+                        pattern="^\d{3}-\d{7}|\d{3}-\d{8}$" required />
+                    <div class="invalid-feedback">
+                        Please enter your contact no. in the correct format
+                    </div>
+                    <div class="valid-feedback">
+                        Looks great!
+                    </div>
+                </div>
+                <!-- End of telephone no. -->
+
+                <!-- ===== Cuisine information ===== -->
+                <hr>
+
+                <!-- Cuisine name -->
+                <div class="mb-5">
+                    <label for="cuisineName" class="form-label">
+                        <h5>Cuisine Name</h5>
+                    </label>
+                    <input type="text" class="form-control" id="cuisineName" required />
+                    <div class="invalid-feedback">
+                        Please enter the cuisine name
+                    </div>
+                    <div class="valid-feedback">
+                        Looks great!
+                    </div>
+                </div>
+                <!-- End of cuisine name -->
+
+                <!-- Category -->
+                <div class="mb-5">
+                    <label for="category" class="form-label">
+                        <h5>Category</h5>
+                    </label>
+                    <select class="form-select" id="category" aria-label="Default select example">
+                        <option selected="Noodel">Noodle</option>
+                        <option value="Rice">Rice</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="Snack">Snack</option>
+                        <option value="Meat">Meat</option>
+                        <option value="notSure">Not sure</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks great!
+                    </div>
+                </div>
+                <!-- End of category -->
+
+                <!-- Recipe -->
+                <div class="mb-5">
+                    <label for="recipe" class="form-label">
+                        <h5>Recipe</h5>
+                    </label>
+                    <textarea type="text" class="form-control" id="recipe" rows="2"
+                        placeholder="Tell us about the recipe" required></textarea>
+                    <div class="invalid-feedback">
+                        Please enter the recipe of cuisines
+                    </div>
+                    <div class="valid-feedback">
+                        Looks great!
+                    </div>
+                </div>
+                <!-- End of Recipe -->
+
+                <!-- Description -->
+                <div class="mb-5">
+                    <label for="description" class="form-label">
+                        <h5>Description</h5>
+                    </label>
+                    <textarea type="text" class="form-control" id="description" rows="3"
+                        placeholder="Tell us more about the description of the cuisine" required></textarea>
+                    <div class="invalid-feedback">
+                        Please enter the description to describe about the cuisine
+                    </div>
+                    <div class="valid-feedback">
+                        Looks great!
+                    </div>
+                </div>
+                <!-- End of Description -->
+
+                <!-- Cuisine photo -->
+                <div class="mb-5">
+                    <label for="cuisinePhoto" class="form-label">
+                        <h5>Cuisine Photo</h5>
+                    </label>
+                    <input class="form-control" type="file" accept=".png, .jpeg, .jpg" id="cuisinePhoto">
+                    <div class="invalid-feedback">
+                        Upload the photo of the pet
+                    </div>
+                    <div class="valid-feedback">
+                        Looks great!
+                    </div>
+                </div>
+
+                <!-- Terms and condition -->
+                <div class="mb-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            By clicking submitting this form, I hereby understand and agree to the terms and conditions.
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <!-- End of terms and condition -->
+
+                <!-- Submit button -->
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn" id="submitBtn">Submit</button>
+                </div>
+                <!-- End of submit button -->
+
+                <!-- Clear button -->
+                <div class="d-flex justify-content-center">
+                    <button type="reset" class="btn" id="clearBtn">Clear</button>
+                </div>
+                <!-- End of clear button -->
+
+            </form>
+        </div>
+    </section>
+    <!-- End of page content -->
+
+    <!-- Footer -->
+    <!-- End of footer -->
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Javascript file -->
+    <script src="js/recipe.js"></script>
+</body>
+
+</html>

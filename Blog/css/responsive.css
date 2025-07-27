@@ -1,0 +1,280 @@
+@media screen and (max-width: 800px) {
+    .topnav .container {
+        padding: 0 20px;
+    }
+
+    .navlist {
+        position: absolute;
+        width: 220px;
+        height: 100vh;
+        top: 100%;
+        right: -400px;
+        flex-direction: column;
+        z-index: 999999;
+        padding: 30px;
+        background-color: #eaeaea;
+        transition: 0.3s ease-in-out;
+    }
+
+    .navonoff {
+        display: block;
+    }
+
+    .headerimg {
+        height: 45vh;
+        padding: 0 20px;
+    }
+
+    .headertitle {
+        font-size: 30px;
+    }
+
+    .headerpera {
+        padding-right: 1rem;
+        font: size 2vw;
+    }
+
+    .headerinfo {
+        padding: 4rem 20px;
+    }
+
+    .headerslider {
+        padding: 0 20px;
+    }
+
+    .headercard {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .threecards {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .filter {
+        flex-wrap: wrap;
+    }
+
+    .filtername {
+        width: 45%;
+    }
+
+    .filtercards {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .featuredcards {
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 50px;
+        font-size: clamp(14px, 2vw, 24px);
+    }
+
+    .gfbg {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .gfbg .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .breakfastsec {
+        flex-direction: column;
+        padding: 0 20px;
+        font: size 2vw;
+    }
+
+    .leftsidesec {
+        width: 100%;
+    }
+
+    .leftposts .tcard {
+        width: 100%;
+    }
+
+    .leftposts .tcard .tcardimg {
+        width: 100%;
+        height: 56%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .logo img {
+        width: 38px;
+    }
+
+    .filtername {
+        width: 45%;
+        height: 130px;
+        padding: 10px;
+    }
+
+    .filtername .flex h3 {
+        font-size: 15px;
+    }
+
+    .tcard {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .headerpera {
+        display: none;
+        /* Hides the element */
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* General adjustments for smaller screens */
+    .featuredrexipe {
+        margin-top: 4rem;
+        /* Reduce top margin for smaller screens */
+        padding: 0 10px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .featuredtitles h1 {
+        font-size: 30px;
+        /* Smaller title font size for mobile */
+    }
+
+    .featuredtitles p {
+        max-width: 100%;
+        /* Allow paragraph to use full width */
+        font-size: 14px;
+        /* Slightly smaller font size */
+    }
+
+    .featuredcards {
+        gap: 12px;
+        /* Reduce gap between cards */
+        margin-top: 2rem;
+        /* Less margin above cards */
+    }
+
+    .fcard {
+        width: 100%;
+        /* Make each card take full width */
+        margin-bottom: 20px;
+        /* Add space between cards */
+    }
+
+    .fcardimg {
+        height: 300px;
+        /* Reduce image height for smaller screens */
+    }
+
+    .fcardinfo {
+        padding: 10px 0 0 20px;
+        /* Adjust padding */
+    }
+
+    .fcardinfo h2 {
+        font-size: 18px;
+        /* Slightly smaller title font */
+    }
+
+    .fcardinfo p {
+        font-size: 13px;
+        /* Smaller font size for descriptions */
+    }
+
+    .fauthorname {
+        padding: 10px;
+        /* Adjust padding for author name */
+        border-top-right-radius: 8px;
+        /* Adjust border-radius */
+    }
+
+    .fauthorname img {
+        width: 30px;
+        /* Smaller author image */
+    }
+
+    .fcardbtn {
+        font-size: 10px;
+        /* Smaller button text */
+        padding: 8px 15px;
+        /* Adjust padding */
+        border-radius: 8px;
+        /* Adjust border-radius */
+    }
+
+    .fcardimg i {
+        top: 2%;
+        left: 2%;
+        padding: 6px;
+        /* Smaller icon padding */
+    }
+
+    .titleicon::before,
+    .titleicon::after {
+        width: 30px;
+        /* Shorten the lines next to the icon */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Further adjustments for very small screens */
+    .featuredtitles h1 {
+        font-size: 25px;
+        /* Even smaller title font size */
+    }
+
+    .fcardimg {
+        height: 250px;
+        /* Further reduce image height */
+    }
+
+    .fcardinfo {
+        padding: 5px 0 0 15px;
+        /* Adjust padding more */
+    }
+
+    .fcardinfo h2 {
+        font-size: 16px;
+        /* Smaller title font */
+    }
+
+    .fcardbtn {
+        font-size: 9px;
+        /* Even smaller button text */
+        padding: 6px 12px;
+        /* Reduce button padding */
+    }
+}
+
+
+/* Styles for mobile view */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headerbtn {
+        display: block;
+        /* Show the button on mobile view */
+        margin: 10px 0;
+        padding-bottom: -100px;
+        /* Adjust spacing as needed */
+    }
+
+    .headertitle,
+    .slidertitle {
+        text-align: center;
+        /* Center the text on mobile view */
+    }
+}

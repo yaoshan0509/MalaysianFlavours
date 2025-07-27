@@ -1,0 +1,198 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+    <title>Malaysian Flavours Login</title>  
+    <link rel="icon" type="image/png" href="../index/image/logo.png">  
+    <link rel="stylesheet" href="signin.css">  
+</head>  
+<body>  
+    <div class="container">  
+        <div class="welcome">  
+            <div class="greenbox">  
+                <div class="signup nodisplay">  
+                    <h1>register</h1>  
+                    <form autocomplete="off" id="signup-form">  
+                        <input type="text" id="signup-username" placeholder="username" required>  
+                        <input type="email" id="signup-email" placeholder="email">  
+                        <input type="password" id="signup-password" placeholder="password">  
+                        <input type="password" id="signup-confirm-password" placeholder="confirm password">  
+                        <button type="submit" class="button submit">create account</button>  
+                    </form>  
+                </div>  
+                <div class="signin">  
+                    <h1>sign in</h1>  
+                    <form class="more-padding" autocomplete="off" id="login-form">  
+                        <input type="text" id="login-username" placeholder="Username">  
+                        <input type="password" id="login-password" placeholder="Password">  
+                        <div class="checkbox">  
+                            <input type="checkbox" id="remember"><label for="remember">Remember me</label>  
+                        </div>  
+                        <button type="submit" class="button submit">login</button>  
+                    </form>  
+                </div>  
+            </div>  
+            <div class="leftbox">  
+                <h2 class="title"><span>Malaysian</span>&<br>Flavours</h2>  
+                <p class="desc">pick your perfect <span>cuisnes</span></p>  
+                <img class="img" src="../index/image/logo.png" alt="logo">  
+                <div class="signup-prompt">  
+                    <p class="account">have an account?</p>  
+                    <button class="button" id="signin">login</a></button>  
+                </div>  
+            </div>  
+            <div class="rightbox">  
+                <h2 class="title"><span>Malaysian</span><br>Flavours</h2>  
+                <img class="img" src="../index/image/logo.png" alt="logo">  
+                <p class="desc">discover <span>authentic</span> recipes</p>  
+                <div class="signup-prompt">  
+                    <p class="account">Don't have an account?</p>  
+                    <button class="button" id="signup">sign up</button>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+
+    <script>  
+        // Get the sign up and sign in buttons  
+        const signUpButton = document.getElementById('signup');  
+        const signInButton = document.getElementById('signin');  
+
+        // Get the sign up and sign in containers  
+        const signUpContainer = document.querySelector('.signup');  
+        const signInContainer = document.querySelector('.signin');  
+
+        // Get the green box container  
+        const greenBox = document.querySelector('.greenbox');  
+
+        // Add event listeners to the buttons  
+        signUpButton.addEventListener('click', () => {  
+            greenBox.style.transform = 'translateX(80%)';  
+            signInContainer.classList.add('nodisplay');  
+            signUpContainer.classList.remove('nodisplay');  
+        });  
+
+        signInButton.addEventListener('click', () => {  
+            greenBox.style.transform = 'translateX(0%)';  
+            signUpContainer.classList.add('nodisplay');  
+            signInContainer.classList.remove('nodisplay');  
+        }); 
+
+   // Cookies functions  
+function setCookie(name, value, days) {  
+    const date = new Date();  
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));  
+    const expires = "expires=" + date.toUTCString();  
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";  
+}  
+
+function getCookie(name) {  
+    const cookies = document.cookie.split(";");  
+    for (let i = 0; i < cookies.length; i++) {  
+        const cookie = cookies[i].trim();  
+        if (cookie.startsWith(name + "=")) {  
+            return cookie.substring(name.length + 1);  
+        }  
+    }  
+    return "";  
+}  
+
+// Session storage functions  
+function setSessionStorage(key, value) {  
+    sessionStorage.setItem(key, value);  
+}  
+
+function getSessionStorage(key) {  
+    return sessionStorage.getItem(key);  
+}  
+
+// Local storage functions  
+function setLocalStorage(key, value) {  
+    localStorage.setItem(key, value);  
+}  
+
+function getLocalStorage(key) {  
+    return localStorage.getItem(key);  
+}  
+
+// Login function  
+document.getElementById('login-form').addEventListener('submit', login);  
+
+function login(event) {  
+    event.preventDefault(); // Prevent the form from submitting normally  
+
+    const username = document.getElementById("login-username").value;  
+    const password = document.getElementById("login-password").value;  
+
+    // Check if the user is registered  
+    const registeredUsername = getLocalStorage("username");  
+    const registeredPassword = getLocalStorage("password");  
+
+    if (username === registeredUsername && password === registeredPassword) {  
+        // Save the user's login information in session storage  
+        setSessionStorage("username", username);  
+        
+        // Store the user's information in cookies  
+        setCookie("username", username);   
+        setCookie("password", password);  
+
+
+        // Set a cookie to remember the user's login status  
+        setCookie("loggedIn", "true", 7);  
+
+        // Redirect the user to the dashboard  
+        window.location.href = '../index/index.html';  
+    } else {  
+        // Display an error message to the user  
+        alert('Invalid username or password');  
+    }  
+}  
+
+// Signup function  
+document.getElementById('signup-form').addEventListener('submit', signup);  
+
+function signup(event) {  
+    event.preventDefault(); // Prevent the form from submitting normally  
+
+    const username = document.getElementById("signup-username").value;  
+    const email = document.getElementById("signup-email").value;  
+    const password = document.getElementById("signup-password").value;  
+    const confirmPassword = document.getElementById("signup-confirm-password").value;  
+
+    if (password !== confirmPassword) {  
+        alert('Passwords do not match');  
+        return;  
+    }  
+
+    // Store the user's information in local storage  
+    setLocalStorage("username", username);  
+    setLocalStorage("email", email);  
+    setLocalStorage("password", password);  
+
+    // Set a cookie to remember the user's login status  
+    setCookie("loggedIn", "true", 7);  
+
+    // Clear the form fields  
+    document.getElementById("signup-username").value = "";  
+    document.getElementById("signup-email").value = "";  
+    document.getElementById("signup-password").value = "";  
+    document.getElementById("signup-confirm-password").value = "";  
+
+    // Alert the user that the account is created  
+    alert("Account created successfully!");  
+}
+
+// Check if the user is logged in  
+function isLoggedIn() {  
+    const sessionUsername = getSessionStorage("username");  
+    const loggedInCookie = getCookie("loggedIn");  
+
+    if (sessionUsername !== null && loggedInCookie === "true") {  
+        return true;  
+    }  
+    return false;  
+}  
+</script>  
+</body>  
+</html>  

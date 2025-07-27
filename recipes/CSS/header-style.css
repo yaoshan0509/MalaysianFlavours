@@ -1,0 +1,344 @@
+:root {  
+  --primary-green:#97bc62;   
+  --dark-green: #2c5f2d;  
+  --light-green: #97bc62;  
+  --accent-green: #6da34d;  
+  --white: #ffffff;  
+  --light-gray: #f5f5f5;  
+  --dark-gray: #333333;  
+} 
+header {  
+  background-color: var(--primary-green);  
+  padding: 15px;  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+}   
+
+header {  
+  background-color: var(--primary-green);  
+  padding: 15px;  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+  position: fixed; /* Fixes the header at the top of the page */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the header stays on top of other elements */
+  transition: height 0.3s ease, padding 0.3s ease; /* Smooth transition for height and padding */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 100%;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.header-logo {
+  width: 60px;
+  height: 44px;
+  margin-right: 20px;
+}
+
+.header-content {  
+  display: flex;   
+  justify-content: flex-evenly;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
+}
+
+.header-content ul {  
+  display: flex;  
+  list-style: none;  
+  justify-content: space-evenly;
+  margin: 0;  
+  padding: 0;
+  flex-wrap: wrap; /* Wraps the menu items on smaller screens */
+}  
+
+.header-content li {  
+  margin-left: 20px;
+  margin-bottom: 10px; /* Adds spacing between items when they wrap */
+}  
+
+.header-content a {
+  color: var(--white);  
+  text-decoration: none;  
+  font-size: 16px;  
+  font-weight: 500;  
+  transition: color 0.3s ease;
+}
+
+.header-content a:hover {  
+  color: var(--light-green);  
+}
+
+/* Search bar Styles */  
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-right: auto; 
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--accent-green); /* Circle border around the whole search form */
+  border-radius: 50px; /* Makes the container circular */
+  padding: 5px 10px; /* Adjust padding for desired size */
+  background-color: var(--light-green); /* Background color inside the circle */
+  width: 500px; /* Ensures full width on small screens */
+  max-width: 600px; /* Limits the width on larger screens */
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background-color: var(--light-green);
+  flex: 1;
+}
+
+.search-input:hover {
+  background-color: var(--accent-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+    flex-direction: row; /* Stack elements vertically */
+    align-items: flex-start; /* Aligns items to the start of the flex container */
+  }
+
+  .header-logo {
+    margin-bottom: 10px; /* Adds space below the logo */
+  }
+
+  .header-content {
+    width: 100%; /* Full width on smaller screens */
+    justify-content: space-between;
+  }
+
+  .header-content ul {
+    justify-content: flex-start; /* Aligns menu items to the left */
+  }
+
+  .header-content li {
+    margin-left: 10px;
+    margin-right: 10px; /* Adds space between menu items */
+  }
+
+  .search-container {
+    width: 100%; /* Full width on smaller screens */
+    max-width: none; /* Removes max-width restriction */
+    margin-bottom: 15px; /* Adds space below the search bar */
+  }
+
+  .search-input {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 8px;
+  }
+
+  .header-content a {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 1200px) {
+  .search-container {
+    width: 350px; 
+    max-width: none; 
+    margin-bottom: 15px; 
+  }
+
+  .search-input {
+    font-size: 13px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    width: 100%; 
+    max-width: none; 
+    margin-bottom: 15px; 
+  }
+
+  .search-input {
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    width: 100%; 
+    max-width: none; 
+    margin-bottom: 15px; 
+  }
+
+  .search-input {
+    font-size: 10px;
+  }
+
+}
+
+/* Basic Navbar Styling */
+.navbar-toggler {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: black;
+  cursor: pointer;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+  height: 100%; /* Full-screen height */
+  width: 0; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  right: 0; /* Positioned to slide in from the right */
+  background-color: white;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s ease; /* Smooth transition */
+  z-index: 9999; /* On top of other content */
+  padding-top: 60px; /* Space for the navbar */
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5); /* Optional shadow for depth */
+  overflow-y: auto; /* Allows scrolling if content is long */
+}
+
+.navbar-menu.active {
+  width: 18%;
+}
+
+/* Navbar menu top section styling */
+.navbar-menu-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* Vertically centers the content */
+  padding: 10px 20px; /* Adjusts padding for spacing */
+  width: 100%; /* Ensures it covers the full width */
+  box-sizing: border-box; /* Ensures padding is included in the element's width */
+  margin: 0; /* Removes any default margin */
+}
+
+.navbar-menu-top h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding-left: 5%;
+  padding-bottom: 10px; /* Adjust space between text and underline */
+  border-bottom: 3px solid #333; /* Creates the underline with custom thickness and color */
+}
+
+/* Close Button Styling */
+.navbar-menu .close-btn {
+  font-size: 80px;
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Align to the right */
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  line-height: 1;
+}
+
+.navbar-menu .navbar-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4; /* Light background color for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px; /* Space around the content */
+  width: 90%; /* Adjust width to fit better within the menu */
+}
+
+/* Heading Styling */
+.navbar-menu-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px; /* Space between the heading and the content */
+  
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Category Section Styling */
+.category-section {
+  margin-bottom: 20px; /* Space between different category sections */
+}
+
+.category-section a{
+  margin-bottom: 20px; /* Space between different category sections */
+  text-decoration: none;
+}
+
+.category-section h4 {
+  font-size: 20px;
+  color: var(--dark-green);
+  margin-bottom: 10px;
+  
+}
+
+/* Category List Styling */
+.category-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  margin-bottom: 3px;
+}
+
+.category-list li a {
+  text-decoration: none;
+  color: var(--dark-gray);
+  font-size: 16px;
+  padding: 5px 30px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.category-list li a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-menu.active {
+    width: 70%; /* Make the menu take up more space on smaller screens */
+  }
+
+  .navbar-menu .close-btn {
+    font-size: 60px; /* Adjust close button size for smaller screens */
+  }
+
+  .navbar-menu-top h2 {
+    font-size: 24px; /* Slightly smaller heading on smaller screens */
+  }
+
+  .category-list li a {
+    font-size: 14px; /* Adjust font size for readability on smaller screens */
+    padding: 5px 20px; /* Reduce padding to fit content better */
+  }
+}
